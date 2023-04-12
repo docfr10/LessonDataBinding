@@ -13,6 +13,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        val text = Text("123")
+        binding.setVariable(1, text)
+        binding.executePendingBindings()
+
         binding.btSubmit.setOnClickListener {
             val sText = binding.etInput.text.toString().trim()
             // Check condition
