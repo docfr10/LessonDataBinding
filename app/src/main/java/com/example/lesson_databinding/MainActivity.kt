@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         binding.lifecycleOwner = this // Для автоматического обновления UI
 
         val text = Text("123")
-        binding.setVariable(1, text)
+        binding.setVariable(1, text) // Установливаем значение 123 в 1 элемент UI
         binding.executePendingBindings()
 
         binding.btSubmit.setOnClickListener {
