@@ -3,9 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="sText"
+            type="com.example.lesson_databinding.Text" />
+
+        <variable
+            name="sText2"
             type="com.example.lesson_databinding.Text" />
     </data>
 
@@ -21,6 +24,16 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@{sText.name}"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{sText2.name}"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />

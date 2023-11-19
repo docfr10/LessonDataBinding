@@ -14,9 +14,10 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.lifecycleOwner = this // Для автоматического обновления UI
 
-        val text = Text("123")
-        binding.setVariable(1, text) // Установливаем значение 123 в 1 элемент UI
-        binding.executePendingBindings()
+        val text1 = Text("123")
+        val text2 = Text("1234")
+        binding.setVariable(1, text1) // Установливаем значение 123 в 1 элемент <data>
+        binding.setVariable(2, text2) // Установливаем значение 1234 во 2 элемент <data>
 
         binding.btSubmit.setOnClickListener {
             val sText = binding.etInput.text.toString().trim()
